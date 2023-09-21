@@ -22,9 +22,9 @@ const [component,setComponent] = useState("user");
   
   const getData = async()=>{
     try {
-      const response = await axios.get('https://randomuser.me/api/');
+      const response = await axios.get('http://localhost:5000/data');
       console.log(response);
-      setData(response.data.results[0])
+      setData(response.data)
       
     } catch (error) {
       console.error(error);
